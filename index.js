@@ -1,10 +1,8 @@
-const config = require(`${process.cwd()}/config/config`);
-const chalk = require("chalk")
-
-console.log(chalk.red("Starting up..."))
-
-const Dream = require("./struct/Client"),
-	client = new Dream(config);
+// Runpod Serverless queue worker entrypointconst config = require(`${process.cwd()}/config/config`);
+if (process.env.RUNPOD_ENDPOINT_ID) {const chalk = require("chalk") const runpod = require("runpod"); const { handler } = 
+  require("./handler");console.log(chalk.red("Starting up...")) runpod.serverless.start({ handler }); console.log("Runpod serverless worker 
+  started");const Dream = require("./struct/Client"),
+} else { client = new Dream(config);
 
 const options = {
   bypass: true,
@@ -31,3 +29,4 @@ client.listentoProcessEvents([
 ], { ignore: false });
 
 client.login(process.env.DTOKEN)
+}
