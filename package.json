@@ -12,7 +12,6 @@
     "chalk": "^4.1.2",
     "didyoumean": "^1.2.2",
     "discord-api-types": "^0.23.0",
-    "discord-images": "^0.1.6",
     "discord-transcript": "^2.0.9",
     "discord-welcome-bot": "^1.0.7",
     "discord.js": "^13.1.0",

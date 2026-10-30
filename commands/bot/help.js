@@ -1,7 +1,6 @@
 const { MessageActionRow, MessageEmbed, MessageSelectMenu } = require('discord.js');
 const didYouMean = require("didyoumean")
 const {readdirSync} = require("fs")
-const Images = require("discord-images")
 const images = new Images.Client()
 const Pages = require("../../helpers/paginate")
 const { pagesCollector } = require("../../helpers/collector")
